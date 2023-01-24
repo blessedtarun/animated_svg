@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: #1e1e1e;
+}
+
+#planet-l,
+#planet-s1,
+#planet-s2,
+#planet-s3 {
+  animation: planetL 3s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#big-earth {
+  animation: bigEarth 10s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#rocket {
+  animation: planetL 10s linear infinite;
+  transform-origin: bottom;
+}
+
+#floating-man {
+  animation: floatingMan 2s linear infinite alternate;
+  transform-origin: bottom;
+}
+
+#error {
+  animation: error 2s linear infinite alternate;
+}
+
+#404text {
+  animation: error2 2s linear infinite alternate;
+}
+
+@keyframes planetL {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes bigEarth {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes floatingMan {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
+
+@keyframes error {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+@keyframes error2 {
+  from {
+    transform: rotateZ(10deg);
+  }
+  to {
+    transform: rotateZ(15deg);
+  }
+}
